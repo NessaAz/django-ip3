@@ -16,95 +16,31 @@
           </button>
           <p class="m-0 mt-3 p-0"><strong>OR</strong></p>
         </div>
-        <form action="" method="POST">
-          {% csrf_token %} {% if form.errors %} {% for error in form.errors %}
-          <div
-            class="alert alert-warning alert-dismissible fade show"
-            role="alert"
-          >
-            {% if error == 'username' %}
-            <strong class="text-title">Username already taken</strong>
-            {% else %}
-            <strong class="text-title">Password mismatch or too short</strong>
-            {% endif %}
 
-            <button
-              type="button"
-              class="close"
-              data-dismiss="alert"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          {% endfor %} {% endif %}
-          <div class="form-group py-1">
-            <input
-              type="text"
-              class="form-control"
-              name="email"
-              placeholder="Mobile number or email"
-              {% if form.email.value %}
-              value="{{ form.email.value }}"
-              {% endif %}
-              required
-            />
-          </div>
-          <div class="form-group py-1">
-            <input
-              type="text"
-              class="form-control"
-              name="full_name"
-              placeholder="Full Name"
-              {% if form.full_name.value %}
-              value="{{ form.full_name.value }}"
-              {% endif %}
-              required
-            />
-          </div>
-          <div class="form-group py-1">
-            <input
-              type="text"
-              class="form-control"
-              name="username"
-              placeholder="Username"
-              {% if form.username.value %}
-              value="{{ form.username.value }}"
-              {% endif %}
-              required
-            />
-          </div>
-          <div class="form-group py-1">
-            <input
-              type="password"
-              class="form-control"
-              name="password1"
-              placeholder="Password"
-              required
-            />
-          </div>
-          <p class="text-center">
-            <small
-              >People who use our service may have uploaded your contact
-              information to Instagram.
-              <a href="#" class="nav-link text-muted">Learn More</a>
-            </small>
-          </p>
-          <p class="text-center">
-            By signing up, you agree to our
-            <a href="#" class="text-muted"
-              ><small><strong>Terms</strong></small></a
-            >,
-            <a href="#" class="text-muted"
-              ><small><strong>Data Policy</strong></small></a
-            >
-            and
-            <a href="#" class="text-muted"
-              ><small><strong>Cookies Policy</strong></small></a
-            >
-          </p>
-          <button class="btn btn-primary btn-sm my-2 btn-block">Sign up</button>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <!--<div class="flex lg:flex-row flex-col lg:space-x-2">
+                <input type="text" placeholder="First Name"  class="bg-gray-200 mb-2 shadow-none  dark:bg-gray-800" style="border: 1px solid #d3d5d8 !important;">
+                <input type="text" placeholder="Last Name" class="bg-gray-200 mb-2 shadow-none  dark:bg-gray-800" style="border: 1px solid #d3d5d8 !important;">
+            </div>-->
+            <input type="text" name="username" placeholder="Username" class="bg-gray-200 mb-2 shadow-none  dark:bg-gray-800" style="border: 1px solid #d3d5d8 !important;">
+            <input type="text" name="email" placeholder="Email" class="bg-gray-200 mb-2 shadow-none  dark:bg-gray-800" style="border: 1px solid #d3d5d8 !important;">
+            <input type="text" name="password1" placeholder="Password" class="bg-gray-200 mb-2 shadow-none  dark:bg-gray-800" style="border: 1px solid #d3d5d8 !important;">
+            <input type="text" name="password2" placeholder="Confirm Password" class="bg-gray-200 mb-2 shadow-none  dark:bg-gray-800" style="border: 1px solid #d3d5d8 !important;">
+            <div class="flex justify-start my-4 space-x-1">
+                <div class="checkbox">
+                    <input type="checkbox" id="chekcbox1" checked>
+                    <label for="chekcbox1"><span class="checkbox-icon"></span> I Agree</label>
+                </div>
+                <a href="#"> Terms and Conditions</a>
+            </div>
+            <button type="submit" class="bg-gradient-to-br from-pink-500 py-3 rounded-md text-white text-xl to-red-400 w-full">Login</button>
+            <div class="text-center mt-5 space-x-2">
+                <p class="text-base"> Do you have an account? <a href="form-login.html"> Login </a></p>
+            </div>
         </form>
+
+       
         <p class="text-center">Have an account? <a href="{% url 'login  ' %}">Log in</a></p>
         <p class="text-center mt-4">Get the app.</p>
       </div>
