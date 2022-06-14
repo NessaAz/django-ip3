@@ -3,7 +3,141 @@
 {% block container %}
 
 <header>
-    
+    <div class="header_inner">
+        <div class="left-side">
+            <!-- Logo -->
+            <div id="logo" class="logo">
+                <a href="feed.html">
+                    <b><h1 style="text-transform: uppercase;">Projects Hub</h1></b>
+                </a>
+            </div>
+
+            <div class="header_search">
+                <input type="text" placeholder="Search topic">
+            </div>
+
+        </div>
+        <div class="right-side lg:pr-4">
+             <!-- upload -->
+            <a href="#"class="bg-pink-500 flex font-bold 
+            hidden hover:bg-pink-600 hover:text-white inline-block items-center lg:block max-h-10 mr-4 px-4 py-2 rounded shado text-white">
+                <ion-icon name="add-circle" class="-mb-1
+                 mr-1 opacity-90 text-xl uilus-circle"></ion-icon> Upload Pictures / Videos
+            </a>
+             <!-- upload dropdown box -->
+            <div uk-dropdown="pos: top-right;mode:click ; animation: uk-animation-slide-bottom-small" class="header_dropdown">
+
+                <!-- notivication header -->
+                <div class="px-4 py-3 -mx-5 -mt-4 mb-5 border-b">
+                    <h4>Upload a snapshot or a video of your project</h4>
+                </div>
+
+                <!-- notification contents -->
+                <div class="flex justify-center flex-center text-center">
+                    <div class="flex flex-col choose-upload text-center">                       
+                        <div class="bg-gray-100 border-2 border-dashed flex flex-col h-24 items-center justify-center relative w-full rounded-lg  "></div>
+                        <p class="my-3 leading-6">please upload here</p>
+                        <div uk-form-custom>
+                            <input type="file">
+                            <a href="#" class="button soft-warning small"> Choose file</a>
+                        </div>
+
+                        <a href="#" class="uk-text-muted mt-3 uk-link"
+                            uk-toggle="target: .choose-upload ;  animation: uk-animation-slide-right-small, uk-animation-slide-left-medium; queued: true">
+                            Or Import Video </a>
+                    </div>
+
+                    <div class="uk-flex uk-flex-column choose-upload" hidden>
+                        <div class="mx-auto flex flex-col h-24 items-center justify-center relative w-full rounded-lg">
+                            
+                        </div>
+                        <p class="my-3 leading-6"> Import videos from YouTube <br> Copy / Paste your video link here </p>
+                        <form class="uk-grid-small" uk-grid>
+                            <div class="uk-width-expand">
+                                <input type="text" class="uk-input uk-form-small  bg-gray-200 " style="box-shadow:none" placeholder="Paste link">
+                            </div>
+                            <div class="uk-width-auto"> <button type="submit" class="button soft-warning -ml-2">
+                                    Import </button> 
+                            </div>
+                        </form>
+                        <a href="#" class="uk-text-muted mt-3 uk-link"
+                            uk-toggle="target: .choose-upload ; animation: uk-animation-slide-left-small, uk-animation-slide-right-medium; queued: true">
+                            Or Upload Project Video </a>
+                    </div>
+
+                </div>
+                <div class="px-4 py-3 -mx-5 -mb-4 mt-5 border-t text-sm">
+                    maximum size - 200MB
+                </div>
+            </div>
+            
+             <!-- Notification -->
+
+            <a href="#" class="header-links-item">
+                
+            </a>
+            <div uk-drop="mode: click;offset: 4" class="header_dropdown">
+                <h4
+                    class="-mt-5 -mx-5 bg-gradient-to-t from-gray-100 to-gray-50 border-b font-bold px-6 py-3">
+                    Projects uploaded </h4>
+                
+                        <a href="#">
+                            <div class="landscape"> <img style='height: 100%; width: 100%; object-fit: contain' src="/static/images/projects.jpg" alt="project">
+                            </div>
+                            <div class="drop_content">
+                                <p> <strong class="text-link" >Ipsum</strong>  
+                                    <span class="text-link"> uploaded a project  </span>
+                                </p>
+                                <span class="time-ago"> 1 minute ago </span>
+                            </div>
+                        </a>
+                    
+                <a href="#" class="see-all">see all notifications</a>
+            </div>
+
+            <!-- Messages -->
+
+            <a href="#" class="header-links-item">
+                
+            </a>
+            <div uk-drop="mode: click;offset: 4" class="header_dropdown">
+                <h4
+                    class="-mt-5 -mx-5 bg-gradient-to-t from-gray-100 to-gray-50 border-b font-bold px-6 py-3">
+                    Messages </h4>
+                <ul class="dropdown_scrollbar" data-simplebar>
+                    <li>
+                        
+                            <div class="drop_avatar"> <img src="" alt="">
+                            </div>
+                            <div class="drop_content">
+                                <strong> Today </strong> <time> 08:00AM</time>
+                                <p> hi LOREM </p>
+                            </div>
+                        
+                    </li>
+                    
+
+
+                </ul>
+                <a href="#" class="see-all">see all messages</a>
+            </div>
+
+            <!-- profile -->
+
+            <a href="#">
+                <img src="" class="header-avatar" alt="">
+            </a>
+            <div uk-drop="mode: click;offset:9" class="header_dropdown profile_dropdown border-t">
+                <ul>
+                    <li><a href="setting.html"> account settings </a> </li>
+                    <li><a href="explore.html">explore </a> </li>
+                    <li><a href="#"> help </a> </li>
+                    <li><a href="signin.html"> log out</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
 </header>
 
 
