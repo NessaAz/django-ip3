@@ -1,18 +1,17 @@
-{% extends "base.html" %} {% block content %}
+{% extends "base.html" %} 
+{% block container %}
 
 <section class="bg-light">
   <div class="container">
     <div class="row">
-      <div class="col-sm-6 col-lg-4 bg-white px-5 pt-4 mt-5 card mx-auto">
+      <div class="col-md-6 col-lg-4 bg-white px-5 pt-4 mt-5 card mx-auto">
         <h2 class="pt-1 pb-2">Create an Account</h2>
         <p class="text-center">
-          <strong class="text-muted"
-            >Sign up to see projects from users all around the world.</strong
-          >
+          <strong class="text-muted">Sign up to see projects from Projects Hub users from all around the world.</strong>
         </p>
         <div class="text-center mb-2">
           <button class="btn btn-sm btn-primary btn-block">
-            <i class="fab fa-facebook-square mr-2"></i> Log in with Facebook
+            <i class="fab fa-facebook-square mr-2"></i> SIgn in with Facebook
           </button>
           <p class="m-0 mt-3 p-0"><strong>OR</strong></p>
         </div>
@@ -25,7 +24,7 @@
             </div>-->
             <input type="text" name="username" placeholder="Username" class="bg-gray-200 mb-2 shadow-none  dark:bg-gray-800" style="border: 1px solid #d3d5d8 !important;">
             <input type="text" name="email" placeholder="Email" class="bg-gray-200 mb-2 shadow-none  dark:bg-gray-800" style="border: 1px solid #d3d5d8 !important;">
-            <input type="text" name="password1" placeholder="Password" class="bg-gray-200 mb-2 shadow-none  dark:bg-gray-800" style="border: 1px solid #d3d5d8 !important;">
+            <input type="text" name="password" placeholder="Password" class="bg-gray-200 mb-2 shadow-none  dark:bg-gray-800" style="border: 1px solid #d3d5d8 !important;">
             <input type="text" name="password2" placeholder="Confirm Password" class="bg-gray-200 mb-2 shadow-none  dark:bg-gray-800" style="border: 1px solid #d3d5d8 !important;">
             <div class="flex justify-start my-4 space-x-1">
                 <div class="checkbox">
@@ -34,15 +33,17 @@
                 </div>
                 <a href="#"> Terms and Conditions</a>
             </div>
-            <button type="submit" class="bg-gradient-to-br from-pink-500 py-3 rounded-md text-white text-xl to-red-400 w-full">Login</button>
+            <button class="btn btn-primary btn-sm btn-block btn-sm my-2 px-5 py-2">
+              sign up
+          </button>
             <div class="text-center mt-5 space-x-2">
                 <p class="text-base"> Do you have an account? <a href="form-login.html"> Login </a></p>
             </div>
         </form>
 
        
-        <p class="text-center">Have an account? <a href="{% url 'login  ' %}">Log in</a></p>
-        <p class="text-center mt-4">Get the app.</p>
+        <p class="text-center">Have an account? <a href="{% url 'login' %}">Log in</a></p>
+        <p class="text-center mt-4">Get the app from Play Store</p>
       </div>
     </div>
   </div>
