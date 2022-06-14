@@ -1,1 +1,20 @@
 {% extends 'base.html' %}
+
+{% block container %}
+<section class="bg-light">
+    <div class="container pt-5">
+        <div class="row ">
+          <div class="col-md-6 col-lg-4 bg-white px-5 pt-4 mt-10 card mx-auto">
+                <div class="mx-auto mt-6" style="width: 300px;">
+                    <p>PROJECTS HUB</>
+                    <p>Log in to an existing account <a href="{% url "login" %}">Log in <i class="fa-brands fa-instagram"></i></a></p>
+                </div>
+
+                <div class="mx-auto mt-1" style="width: 300px;">
+                    <p>Create an Instaapp account <a href="{% url "signup" %}">Sign up <i class="fa-brands fa-instagram"></i></a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>            
+{% endblock%}
