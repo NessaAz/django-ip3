@@ -1,15 +1,26 @@
 from pathlib import Path
 import os
+import cloudinary
+from decouple import config, Csv
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
+cloudinary.config( 
+  cloud_name = config('CLOUD_NAME'), 
+  api_key = config('CLOUD_API'),
+  api_secret = config('API_SECRET'),
+)
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-s)*2adfr^=jk9&_(u(4l$s*%wrg7(v6u9$n(hz__s#(hvk*r2)'
+MODE=config("MODE", default="dev")
+SECRET_KEY = config('SECRET_KEY')
+# DEBUG = config('DEBUG', default=False, cast=bool)
+
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -20,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'cloudinary',
     'creativesapp',
     'django.contrib.admin',
     'django.contrib.auth',
