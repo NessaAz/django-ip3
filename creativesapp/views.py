@@ -33,7 +33,7 @@ def signup(request):
             return redirect('signup')
     else:
         
-        return render(request, 'feed.html')
+        return render(request, 'signup.html')
     
         
 def login(request):
@@ -58,7 +58,7 @@ def login(request):
         #form = AuthenticationForm()    
         return render(request, 'login.html')
 
-@login_required(login_url='login')
+#@login_required(login_url='login')
 def feed(request):
     return render(request, 'feed.html')
 
